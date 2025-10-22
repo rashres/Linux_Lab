@@ -1,5 +1,5 @@
 #!/bin/bash
-# Part (b): Accept YES, Yes, or yes
+# Part (c): Final version with confirmation message
 
 input=""
 
