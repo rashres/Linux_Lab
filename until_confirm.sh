@@ -1,9 +1,9 @@
 #!/bin/bash
-# Part (a): Keep asking for YES until user types it exactly
+# Part (b): Accept YES, Yes, or yes
 
 input=""
 
-until [ "$input" = "YES" ]; do
+until [[ "$input" == "YES" || "$input" == "Yes" || "$input" == "yes" ]]; do
   read -p "Type YES to confirm: " input
 done
 
