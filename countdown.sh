@@ -1,5 +1,5 @@
 #!/bin/bash
-# Part (b): countdown using while loop
+# Part (c): complete countdown with Liftoff message
 
 read -p "Enter a positive number: " n
 
@@ -13,3 +13,5 @@ while [ "$n" -gt 0 ]; do
   n=$((n - 1))
   sleep 1
 done
+
+echo "Liftoff!"
