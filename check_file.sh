@@ -1,5 +1,5 @@
 #!/bin/bash
-# Part (a): Ask for filename and ensure input is not empty
+# Part (b): Check whether the file exists
 
 read -p "Enter filename: " file
 
@@ -8,4 +8,8 @@ if [ -z "$file" ]; then
   exit 1
 fi
 
-echo "You entered: $file"
+if [ -f "$file" ]; then
+  echo "File '$file' exists."
+else
+  echo "File '$file' not found."
+fi
