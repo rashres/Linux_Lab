@@ -1,5 +1,5 @@
 #!/bin/bash
-# Part (b): Check whether the file exists
+# Part (c): Offer to create file if it doesn't exist
 
 read -p "Enter filename: " file
 
@@ -9,7 +9,14 @@ if [ -z "$file" ]; then
 fi
 
 if [ -f "$file" ]; then
-  echo "File '$file' exists."
+  echo "File '$file' already exists."
 else
   echo "File '$file' not found."
+  read -p "Would you like to create it? (y/n): " choice
+  if [ "$choice" = "y" ]; then
+    touch "$file"
+    echo "File '$file' created successfully."
+  else
+    echo "No file created. Exiting..."
+  fi
 fi
