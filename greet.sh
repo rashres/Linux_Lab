@@ -1,8 +1,8 @@
 #!/bin/bash
 if [ $# -gt 0 ]; then
-  name="$1"
+  name="$*"
 else
-  read -p "Enter your name: " name
+  read -p "Enter your full name: " name
 fi
 echo "Welcome to the LINUX Research Lab, $name!"
 
