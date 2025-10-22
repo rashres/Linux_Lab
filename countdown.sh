@@ -1,5 +1,5 @@
 #!/bin/bash
-# Part (a): prompt for a positive number
+# Part (b): countdown using while loop
 
 read -p "Enter a positive number: " n
 
@@ -8,4 +8,8 @@ if [ -z "$n" ] || [ "$n" -le 0 ]; then
   exit 1
 fi
 
-echo "Starting countdown from $n..."
+while [ "$n" -gt 0 ]; do
+  echo "$n"
+  n=$((n - 1))
+  sleep 1
+done
